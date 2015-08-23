@@ -28,6 +28,7 @@
             * otherwise, render request as a form to input user
             */
             else {
+                $this->f3->set('site', 'Gllow - New User');
                 $this->f3->set('page_head','Create User');
                 $this->f3->set('view','user/create.html');
             }

@@ -5,6 +5,7 @@
         <title><?php echo $site; ?></title>
         <!-- Bootstrap -->
         <link href="../../ui/css/bootstrap.min.css" rel="stylesheet" media="screen">
+        <link rel="stylesheet" href="../../ui/css/style.css">
     </head>
  
     <body>

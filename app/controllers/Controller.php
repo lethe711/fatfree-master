@@ -3,11 +3,15 @@
  
         protected $f3;
         protected $db;
+        protected $audit;
 
         function beforeroute() {        
         }
 
-        function afterroute() { 
+        function afterroute() {
+            if ($this->audit->isMobile()) {
+                $this->f3->set('isMobile', true);
+            }
             echo Template::instance()->render('layout.html');
         }
 
@@ -21,8 +25,11 @@
                 $f3->get('db_pass')
             );
 
+            $audit = \Audit::instance();
+
             $this->f3=$f3;
             $this->db=$db;
+            $this->audit=$audit;
         }
     }
 ?>
