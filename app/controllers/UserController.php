@@ -57,6 +57,9 @@
                 $this->f3->set('page_head','Update User');
                 $this->f3->set('view','user/update.html');
             }
+            /*
+            * testing
+            */
         }
         
         /*
