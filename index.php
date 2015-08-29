@@ -6,6 +6,11 @@ $f3->config('config/config.ini');
 $f3->config('config/routes.ini');
 $f3->run();
 
+
+//$f3->set('ONERROR', function ($f3) {
+//   echo \Template::instance()->render('error.html');
+//});
+
 //$f3->set('DEBUG',1);
 //if ((float)PCRE_VERSION<7.9)
 //	trigger_error('PCRE version is out of date');
@@ -13,7 +18,10 @@ $f3->run();
 //// Load configuration
 //$f3->config('config.ini');
 //
-//$f3->route('GET /', 'Index');
+//$f3->route('GET /', function () {
+//    echo "this is demo";
+//});
+//$f3->run();
 //$f3->route('GET /order/@name', 'Order');
 //
 //$f3->route('GET /userref',

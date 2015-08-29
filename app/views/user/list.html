@@ -1,9 +1,16 @@
 <table width="600" cellpadding="5" class="table table-hover table-bordered">
     <thead>
         <tr>
+<!--
             <th scope="col">Name</th>
             <th scope="col">Email</th>
             <th scope="col">Mobile</th>
+            <th scope="col">Address</th>
+            <th scope="col">Action</th>
+-->
+            <th scope="col">Name</th>
+            <th scope="col">Supplier</th>
+            <th scope="col">Code</th>
             <th scope="col">Address</th>
             <th scope="col">Action</th>
         </tr>

@@ -1,13 +1,13 @@
 <?php
     class UserController extends Controller {
- 
+
         public function index() {
             $user = new User($this->db);
             $this->f3->set('users',$user->all());
-            $this->f3->set('page_head','User List');        
+            $this->f3->set('page_head','Item List');
             $this->f3->set('view','user/list.html');
         }
-        
+
         /*
         * Create user function
         * POST request: create user
@@ -23,7 +23,7 @@
                 $user->add();
 
                 $this->f3->reroute('/');
-            } 
+            }
             /*
             * otherwise, render request as a form to input user
             */
@@ -33,7 +33,7 @@
                 $this->f3->set('view','user/create.html');
             }
         }
-        
+
         /*
         * Update user function
         * POST request: update user information
@@ -62,20 +62,26 @@
             * testing
             */
         }
-        
+
         /*
         * Delete user function
         * GET only
         */
         public function delete() {
-            
+
             if($this->f3->exists('PARAMS.id')) {
                 $user = new User($this->db);
                 $user->delete($this->f3->get('PARAMS.id'));
             }
-            
+
             // go back to home page after delete
             $this->f3->reroute('/');
         }
+
+        public function admin() {
+            $this->f3->set('view', 'user/admin.html');
+        }
+
+
     }
 ?>
