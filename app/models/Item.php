@@ -30,5 +30,24 @@
             $this->load(array('itemId=?',$id));
             $this->erase();
         }
+
+        public function getSpecial() {
+            $this->load(
+                        array('isSpecial=?', 1),
+                        array('isActive=?', 1)
+                    );
+            return $this->query;
+        }
+
+        public function getAllByCategoryId($cafeId, $categoryId) {
+            $this->load(
+                    array('cafeId=?', $cafeId),
+                    array('categoryId=?', $categoryId),
+                    array('isActive=?', true)
+                )
+            ;
+            return $this->query;
+        }
+
     }
 ?>

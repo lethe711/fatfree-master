@@ -82,6 +82,22 @@
             $this->f3->set('view', 'user/admin.html');
         }
 
+        public function menu () {
+            if($this->f3->exists('POST.create')) {
+                $user = new User($this->db);
+                $user->add();
+
+                $this->f3->reroute('/');
+            }
+            /*
+            * otherwise, render request as a form to input user
+            */
+            else {
+                $item = new Item($this->db);
+                $this->f3->set('items', $item->getAllByCategoryId(1, 1));
+                $this->f3->set('view','user/item.html');
+            }
+        }
 
     }
 ?>
