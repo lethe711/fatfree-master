@@ -5,6 +5,10 @@
     <?php endif; ?>
 
     <script src="../../ui/js/bootstrap.min.js"></script>
+<<<<<<< HEAD
 
+=======
+
+>>>>>>> lethe/master
     </body>
 </html>

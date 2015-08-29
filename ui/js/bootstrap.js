@@ -2277,4 +2277,8 @@
   })
 
 
+<<<<<<< HEAD
 }(window.jQuery);
+=======
+}(window.jQuery);
+>>>>>>> lethe/master
