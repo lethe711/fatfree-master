@@ -1,19 +1,10 @@
 <?php
     class Controller {
-<<<<<<< HEAD
-
-=======
-
->>>>>>> lethe/master
         protected $f3;
         protected $db;
         protected $audit;
 
-<<<<<<< HEAD
         function beforeroute() {
-=======
-        function beforeroute() {
->>>>>>> lethe/master
         }
 
         function afterroute() {
